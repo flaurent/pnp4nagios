@@ -351,7 +351,7 @@ class rrd_Core {
     }
 
 	public static function darkteint(){
-		$line = '';
+		$line = ' ';
 		$line .= '--color=BACK#000000 ';
 		$line .= '--color=FONT#F7F7F7 ';
 		$line .= '--color=SHADEA#ffffff ';
