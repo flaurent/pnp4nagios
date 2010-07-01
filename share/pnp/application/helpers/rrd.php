@@ -122,6 +122,19 @@ class rrd_Core {
         return $s;
     }
     
+	public static function midcut($string, $start=0, $length=18, $align='left'){
+		if(strlen($string) > $start+$length){
+			$string = substr($string,$start,($length-3))."...";
+		}
+		if($align == 'left'){
+			$format = "%-".$length."s";
+		}else{
+			$format = "%".$length."s";
+		}
+			$s = sprintf($format,$string);
+			return $s;
+	}
+
     public static function area($vname=FALSE, $color=FALSE, $text=FALSE, $stack=FALSE){
         $line = "";
         if($vname === FALSE){
